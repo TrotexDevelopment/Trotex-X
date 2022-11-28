@@ -131,18 +131,7 @@ function library.new(library_title, cfg_location)
 
         menu.on_load_cfg:Fire()
     end
-UserInputService.InputBegan:Connect(function(input, processed)
-	if (input.KeyCode == Enum.KeyCode.RightShift and not processed) then
-		if Debounce then return end
-		if Hidden then
-			Hidden = false
-			Unhide()
-		else
-			Hidden = true
-			Hide()
-		end
-	end
-end)
+
     menu.open = true
     local ScreenGui = library:create("ScreenGui", {
         ResetOnSpawn = false,
